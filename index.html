@@ -4,8 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Cleaning Company</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+
+    <!-- Evil Company and Copyright Meta Tags -->
+    <meta name="author" content="Evil Company">
+    <meta name="copyright" content="© 2025 Evil Company. All rights reserved.">
+    <meta name="company" content="Evil Company">
+
+    <!-- Description and Keywords -->
+    <meta name="description" content="The Cleaning Company - Exclusive apartment cleaners of 1730 Rue St. Patrick. Fast, thorough, and affordable cleaning services.">
+    <meta name="keywords" content="apartment cleaning">
+
+    <!-- Open Graph Meta Tags for better social media sharing -->
+    <meta property="og:title" content="The Cleaning Company">
+    <meta property="og:description" content="Exclusive apartment cleaners of 1730 Rue St. Patrick. Fast, thorough, and affordable.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.1730cleaning.com">
+
+ <!-- Allow crawlers -->
+ <meta name="robots" content="index, follow">
+
+ <!-- Structured Data -->
+ <script type="application/ld+json">
+ {
+   "@context": "https://schema.org",
+   "@type": "LocalBusiness",
+   "name": "The Cleaning Company",
+   "description": "Exclusive apartment cleaners of 1730 Rue St. Patrick. Fast, thorough, and affordable cleaning services.",
+   "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1730 Rue St. Patrick",
+     "addressLocality": "Montreal",
+     "addressRegion": "Quebec",
+     "addressCountry": "CA"
+   },
+   "telephone": "+15197025047",
+   "url": "https://www.1730cleaning.com",
+   "priceRange": "$25/hr"
+ }
+ </script>
+
+ <!-- Stylesheet -->
+ <link rel="stylesheet" href="styles.css" />
+/head>
   <body>
     <section id="home" class="hero">
       <video id="background-video" autoplay loop muted playsinline>
@@ -18,7 +58,7 @@
       <div class="container">
         <h2>What we do</h2>
         <p>
-	The exclusive apartment cleaners of <br><span style="font-size: 1.5rem; font-weight: 600">1730 Rue St. Patrick</span>
+          The exclusive apartment cleaners of <br><span class="address">1730 Rue St. Patrick</span>
         </p>
 	<br>
         <p>
@@ -104,10 +144,10 @@
       </div>
     </footer>
 
-    <!-- <a href="https://wa.me/+15197025047" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/+15197025047" class="whatsapp-float" target="_blank">
       <img src="images/whatsapp.png" alt="WhatsApp" />
-      <span class="whatsapp-text">$25 <span style="font-size: 12px"> /hr</span></span>
-    </a> -->
+      <span class="whatsapp-text">$25 <span class="per-hour">/hr</span></span>
+    </a>
 
     <script src="script.js"></script>
     <script>
@@ -139,7 +179,7 @@
         }
 
         // Update the video source on window resize
-        window.addEventListener('resize', () => window.innerWidth > 649 ? setVideoSource : null);
+        window.addEventListener('resize', setVideoSource);
       });
     </script>
   </body>

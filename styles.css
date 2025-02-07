@@ -96,7 +96,7 @@ header nav ul li a:hover {
    right: 0;
    top: 0;
    bottom: 0;
-   z-index: -1;
+   z-index: -10;
 }
 
 /* Hero Section */
@@ -199,10 +199,10 @@ header nav ul li a:hover {
 }
 
 .about p {
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-style: italic;
   color: #313131;
-  max-width: 800px;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
@@ -324,6 +324,15 @@ footer p {
   transform: rotateY(180deg);
 }
 
+.whatsapp-text .per-hour {
+  font-size: 12px;
+}
+
+.address {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .flowchart {
   text-align: center;
   padding: 4rem 0;
@@ -341,7 +350,7 @@ footer p {
 .bubble {
   display: flex;
   flex-direction: column;
-  height: 400px; /* Adjust this value as needed */
+  height: 320px; /* Adjust this value as needed */
   width: 15vw; /* Adjust this value as needed */
   margin: 10px;
   border: 5px solid #fff;
@@ -375,7 +384,7 @@ footer p {
 }
 
 .bubble-text {
-  height: 65%;
+  height: 30%;
   padding: 20px;
   overflow-y: auto;
   font-size: 0.8em;
@@ -383,14 +392,16 @@ footer p {
 }
 
 .bubble-text p {
+  height: 30%;
   color: #000;
   font-weight: 200;
+  font-size: 1rem;
 }
 
 .bubble-title h3 {
   color: #000;
   font-weight: 400;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .flowchart-container {
@@ -409,6 +420,10 @@ footer p {
     width: 80vw;
     height: 100vw; /* Decreased height to accommodate title */
     padding-top: 1rem; /* Decreased padding to the top */
+  }
+
+  .about p {
+    font-size: 1rem;
   }
 
  }
