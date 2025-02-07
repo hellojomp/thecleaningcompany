@@ -292,8 +292,8 @@ footer p {
 }
 
 .whatsapp-float img {
-  width: 120%;
-  height: 120%;
+  width: 90%;
+  height: 90%;
   border-radius: 50%;
 }
 
@@ -319,7 +319,7 @@ footer p {
   transform: rotateY(180deg);
 }
 
-.whatsapp-float.flipped {
+.whatsapp-float .flipped {
   transform: rotateY(180deg);
 }
 
