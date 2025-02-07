@@ -319,14 +319,6 @@ footer p {
   transform: rotateY(180deg);
 }
 
-.whatsapp-float .flipped {
-  transform: rotateY(180deg);
-}
-
-.whatsapp-text .per-hour {
-  font-size: 12px;
-}
-
 .address {
   font-size: 1.5rem;
   font-weight: 600;
