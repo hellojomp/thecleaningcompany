@@ -20,32 +20,32 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.1730cleaning.com">
 
- <!-- Allow crawlers -->
- <meta name="robots" content="index, follow">
+  <!-- Allow crawlers -->
+  <meta name="robots" content="index, follow">
 
  <!-- Structured Data -->
- <script type="application/ld+json">
- {
-   "@context": "https://schema.org",
-   "@type": "LocalBusiness",
-   "name": "The Cleaning Company",
-   "description": "Exclusive apartment cleaners of 1730 Rue St. Patrick. Fast, thorough, and affordable cleaning services.",
-   "address": {
-     "@type": "PostalAddress",
-     "streetAddress": "1730 Rue St. Patrick",
-     "addressLocality": "Montreal",
-     "addressRegion": "Quebec",
-     "addressCountry": "CA"
-   },
-   "telephone": "+15197025047",
-   "url": "https://www.1730cleaning.com",
-   "priceRange": "$25/hr"
- }
- </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Cleaning Company",
+    "description": "Exclusive apartment cleaners of 1730 Rue St. Patrick. Fast, thorough, and affordable cleaning services.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1730 Rue St. Patrick",
+      "addressLocality": "Montreal",
+      "addressRegion": "Quebec",
+      "addressCountry": "CA"
+    },
+    "telephone": "+15197025047",
+    "url": "https://www.1730cleaning.com",
+    "priceRange": "$25/hr"
+  }
+  </script>
 
- <!-- Stylesheet -->
- <link rel="stylesheet" href="styles.css" />
-/head>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <section id="home" class="hero">
       <video id="background-video" autoplay loop muted playsinline>
@@ -179,7 +179,7 @@
         }
 
         // Update the video source on window resize
-        window.addEventListener('resize', setVideoSource);
+        window.addEventListener('resize', () => window.innerWidth > 640 ? setVideoSource : null);
       });
     </script>
   </body>
