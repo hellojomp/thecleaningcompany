@@ -1,0 +1,3 @@
+name = "evil-worker"
+main = "worker.js"
+compatibility_date = "2023-10-01"
