@@ -8,51 +8,94 @@
   </head>
   <body>
     <section id="home" class="hero">
-    <video id="background-video" autoplay loop muted>
-      <source src="videos/desktop.mp4" type="video/mp4">
-    </video>
+      <video id="background-video" autoplay loop muted>
+        <source id="video-source" src="videos/desktop.mp4" type="video/mp4">
+      </video>
     </section>
+
 
     <section id="about" class="about">
       <div class="container">
         <h2>What we do</h2>
         <p>
-	The exclusive cleaners of <span style="font-weight: 600">1730 Rue St. Patrick</span>
+	The exclusive apartment cleaners of <br><span style="font-size: 1.5rem; font-weight: 600">1730 Rue St. Patrick</span>
         </p>
 	<br>
         <p>
 	Welcome to The Cleaning Company-where clean meets effortless. We know clean is hard and we want to help. We are a group of working professionals existing between the boundaries of careers. We offer general and spot cleaning. Think of it as cleaning by the minute: fast, thorough and affordable.
 	</p>
-        <section id="flowchart" class="flowchart">
-            <div class="container">
-              <div class="flowchart-container">
-                <div class="bubble">
-                  <img src="images/message-icon.png" alt="Step 1" />
-                  <h3>Message</h3>
-                </div>
-                <div class="bubble">
-                  <img src="images/calendar-icon.png" alt="Step 2" />
-                  <h3>Schedule</h3>
-                </div>
-                <div class="bubble">
-                  <img src="images/hand-off-icon.png" alt="Step 3" />
-                  <h3>Hand Off</h3>
-                </div>
-                <div class="bubble">
-                  <img src="images/mop-icon.png" alt="Step 4" />
-                  <h3>We Clean</h3>
-                </div>
-                <div class="bubble">
-                  <img src="images/duster-icon.png" alt="Step 5" />
-                  <h3>We Clean</h3>
-                </div>
-                <div class="bubble">
-                  <img src="images/vacuum-icon.png" alt="Step 6" />
-                  <h3>We Clean</h3>
-                </div>
-              </div>
-            </div>
-          </section>
+  <section id="flowchart" class="flowchart">
+    <div class="container">
+      <div class="flowchart-container">
+        <div class="bubble">
+          <div class="bubble-image">
+            <img src="images/message-icon.png" alt="Step 1" />
+          </div>
+          <div class="bubble-title">
+            <h3>Message</h3>
+          </div>
+          <div class="bubble-text">
+            <p>Contact us, tell us who, what and where, and we do the rest, fast.</p>
+          </div>
+        </div>
+        <div class="bubble">
+          <div class="bubble-image">
+            <img src="images/calendar-icon.png" alt="Step 2" />
+          </div>
+          <div class="bubble-title">
+            <h3>Schedule</h3>
+          </div>
+          <div class="bubble-text">
+            <p>Pick a time. It'll work. We promise.</p>
+          </div>
+        </div>
+        <div class="bubble">
+          <div class="bubble-image">
+            <img src="images/hand-off-icon.png" alt="Step 3" />
+          </div>
+          <div class="bubble-title">
+            <h3>Hand Off</h3>
+          </div>
+          <div class="bubble-text">
+            <p>Provide access to your space, or leave us the key in our mailbox.</p>
+          </div>
+        </div>
+        <div class="bubble">
+          <div class="bubble-image">
+            <img src="images/mop-icon.png" alt="Step 4" />
+          </div>
+          <div class="bubble-title">
+            <h3>We Clean</h3>
+          </div>
+          <div class="bubble-text">
+            <p>We hot mop and sanitize floors.</p>
+          </div>
+        </div>
+        <div class="bubble">
+          <div class="bubble-image">
+            <img src="images/duster-icon.png" alt="Step 5" />
+          </div>
+          <div class="bubble-title">
+            <h3>We Clean</h3>
+          </div>
+          <div class="bubble-text">
+            <p>We dust and clean surfaces.</p>
+          </div>
+        </div>
+        <div class="bubble">
+          <div class="bubble-image">
+            <img src="images/vacuum-icon.png" alt="Step 6" />
+          </div>
+          <div class="bubble-title">
+            <h3>We Clean</h3>
+          </div>
+          <div class="bubble-text">
+            <p>We vacuum carpets and upholstery</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
       </div>
     </section>
     <footer>
@@ -63,9 +106,28 @@
 
     <a href="https://wa.me/+15197025047" class="whatsapp-float" target="_blank">
       <img src="images/whatsapp.png" alt="WhatsApp" />
-      <span class="whatsapp-text">$25/hr</span>
+      <span class="whatsapp-text">$25 <span style="font-size: 12px"> /hr</span></span>
     </a>
 
     <script src="script.js"></script>
+    <script>
+      function setVideoSource() {
+        var video = document.getElementById('background-video');
+        var source = document.getElementById('video-source');
+        if (window.innerWidth <= 400) {
+          source.setAttribute('src', 'videos/mobile.mp4');
+        } else {
+          source.setAttribute('src', 'videos/desktop.mp4');
+        }
+        video.load(); // Reload the video to apply the new source
+      }
+
+      // Set video source on page load
+      setVideoSource();
+
+      // Update video source when window is resized
+      window.addEventListener('resize', setVideoSource);
+    </script>
   </body>
 </html>
+
