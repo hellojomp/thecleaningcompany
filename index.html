@@ -8,7 +8,7 @@
   </head>
   <body>
     <section id="home" class="hero">
-      <video id="background-video" autoplay loop muted>
+      <video id="background-video" autoplay loop muted playsinline>
         <source id="video-source" src="videos/mobile.mp4" type="video/mp4">
       </video>
     </section>
@@ -139,7 +139,7 @@
         }
 
         // Update the video source on window resize
-        window.addEventListener('resize', setVideoSource);
+        window.addEventListener('resize', () => window.innerWidth > 649 ? setVideoSource : null);
       });
     </script>
   </body>
