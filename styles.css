@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: "Montserrat", serif;
+  font-family: "League Spartan", serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -12,9 +12,7 @@ body {
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
@@ -89,22 +87,16 @@ header nav ul li a:hover {
 }
 
 #background-video {
-   width: 100vw;
-   height: 100vh;
-   object-fit: cover;
-   left: 0;
-   right: 0;
-   top: 0;
-   bottom: 0;
-   z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -10;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  color: #fff;
-  text-align: center;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -114,21 +106,10 @@ header nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.22); /* Adjust the opacity as needed */
+  background: rgba(0, 0, 0, 0.22);
   z-index: -1;
 }
 
-.hero h2 {
-  font-size: 3em;
-  margin-bottom: 200px;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: -120px;
-  font-weight: 300;
-}
 
 .logo-container {
   position: absolute;
@@ -143,8 +124,7 @@ header nav ul li a:hover {
   background: #fff;
 }
 
-.services h2,
-.step-card h2 {
+.services h2, .step-card h2 {
   margin-bottom: 40px;
   font-size: 2em;
   font-weight: 700;
@@ -158,8 +138,7 @@ header nav ul li a:hover {
   gap: 20px;
 }
 
-.service-item,
-.step-card {
+.service-item, .step-card {
   flex: 1 1 30%;
   padding: 30px;
   background: #fff;
@@ -180,7 +159,7 @@ header nav ul li a:hover {
   color: #007bff;
 }
 
-.service-item p {
+.service-item p, .step-card p {
   font-size: 1em;
   color: #666;
 }
@@ -194,13 +173,12 @@ header nav ul li a:hover {
 
 .about h2 {
   margin-bottom: 20px;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .about p {
-  font-size: 1.6rem;
-  font-style: italic;
+  font-size: 1.5rem;
   color: #313131;
   max-width: 80vw;
   margin: 0 auto;
@@ -233,6 +211,7 @@ footer p {
   font-size: 0.5em;
 }
 
+/* Steps Section */
 .steps {
   padding: 50px 0;
   background-color: white;
@@ -258,19 +237,7 @@ footer p {
   margin-top: 0;
 }
 
-.step-card p {
-  font-size: 1em;
-  color: #666;
-}
-
-.steps h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2em;
-  font-weight: 700;
-  color: #007bff;
-}
-
+/* WhatsApp Float */
 .whatsapp-float {
   position: fixed;
   width: 4rem;
@@ -297,8 +264,7 @@ footer p {
   border-radius: 50%;
 }
 
-.whatsapp-float img,
-.whatsapp-float .whatsapp-text {
+.whatsapp-float img, .whatsapp-float .whatsapp-text {
   backface-visibility: hidden;
   position: absolute;
 }
@@ -319,11 +285,13 @@ footer p {
   transform: rotateY(180deg);
 }
 
+/* Address */
 .address {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
+/* Flowchart */
 .flowchart {
   text-align: center;
   padding: 4rem 0;
@@ -341,8 +309,8 @@ footer p {
 .bubble {
   display: flex;
   flex-direction: column;
-  height: 320px; /* Adjust this value as needed */
-  width: 15vw; /* Adjust this value as needed */
+  height: 380px;
+  width: 15vw;
   margin: 10px;
   border: 5px solid #fff;
   border-radius: 10px;
@@ -350,6 +318,7 @@ footer p {
   overflow: hidden;
   padding-top: 20px;
   text-wrap: stable;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.3);
 }
 
 .bubble-image {
@@ -369,6 +338,7 @@ footer p {
 
 .bubble-title {
   height: 10%;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,22 +346,21 @@ footer p {
 
 .bubble-text {
   height: 30%;
-  padding: 20px;
-  overflow-y: auto;
-  font-size: 0.8em;
+  padding: 0px 10px 10px 10px;
+  overflow: hidden; /* Changed from overflow-y: auto to overflow: hidden */
+  font-size: 1em;
   text-align: center;
 }
 
 .bubble-text p {
-  height: 30%;
   color: #000;
-  font-weight: 200;
-  font-size: 1rem;
+  font-weight: 300;
+  font-size: 1.4rem;
 }
 
 .bubble-title h3 {
   color: #000;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 2rem;
 }
 
@@ -399,6 +368,20 @@ footer p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.book-with-us {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.book-with-us h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.book-with-us p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 640px) {
@@ -409,12 +392,15 @@ footer p {
 
   .bubble {
     width: 80vw;
-    height: 100vw; /* Decreased height to accommodate title */
-    padding-top: 1rem; /* Decreased padding to the top */
+    height: 100vw;
+    padding-top: 1rem;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
   }
 
   .about p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
-
- }
+}
