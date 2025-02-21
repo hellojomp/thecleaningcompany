@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     function setVideoSource() {
       var video = document.getElementById('background-video');
       var source = document.getElementById('video-source');
@@ -27,4 +27,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update the video source on window resize
     window.addEventListener('resize', () => window.innerWidth > 640 ? setVideoSource : null);
-  });
+});
